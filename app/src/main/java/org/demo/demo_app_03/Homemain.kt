@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 
-class homemain : AppCompatActivity() {
+class Homemain : AppCompatActivity() {
     private lateinit var nameTextView: TextView
     private lateinit var emailTextView: TextView
     private lateinit var phoneTextView: TextView
@@ -18,35 +18,31 @@ class homemain : AppCompatActivity() {
         setContentView(R.layout.activity_home_main)
 
         nameTextView = findViewById(R.id.name)
-        intent.getStringExtra("username")?.let { name ->
-            nameTextView.text = "Name: $name"
-        }
-
+        val userName = intent.getStringExtra("name")
+        nameTextView.text = "User Name: "+userName
 
         emailTextView = findViewById(R.id.email)
-        intent.getStringExtra("email")?.let { email ->
-            emailTextView.text = "Email: $email"
-        }
+        val userEmail = intent.getStringExtra("email")
+        nameTextView.text = "User Name: "+userEmail
 
         phoneTextView = findViewById(R.id.phone)
-        intent.getStringExtra("phone")?.let { phone ->
-            phoneTextView.text = "Phone: $phone"
-        }
+        val userPhone = intent.getStringExtra("phone")
+        phoneTextView.text = "User Name: "+userPhone
 
         genderTextView = findViewById(R.id.gender)
-        intent.getStringExtra("gender")?.let { gender ->
-            genderTextView.text = "Gender: $gender"
-        }
+        val userGender = intent.getStringExtra("gender")
+        genderTextView.text = "User Name: "+userGender
 
         passwordTextView = findViewById(R.id.pass)
-        intent.getStringExtra("password")?.let { password ->
-            passwordTextView.text = "Password: $password"
-        }
+        val userPassword = intent.getStringExtra("password")
+        passwordTextView.text = "User Name: "+userPassword
 
         conPassTextView = findViewById(R.id.confirmpassword)
-        intent.getStringExtra("confirm")?.let { confirmpassword ->
-            conPassTextView.text = "Confirm Password: $confirmpassword"
-        }
+        val userConfirm = intent.getStringExtra("confirm")
+        conPassTextView.text = "User Name: "+userConfirm
+
+
+
 
 
     }

@@ -27,9 +27,9 @@ class home : AppCompatActivity() {
         button = findViewById(R.id.button)
 
         button.setOnClickListener {
-            val intent = Intent(this@home, homemain::class.java)
+            startActivity( Intent(this@home, homemain::class.java))
             val name = name.text.toString()
-            intent.putExtra("username", name)
+            intent.putExtra("name", name)
 
             val email = email.text.toString()
             intent.putExtra("email", email)
