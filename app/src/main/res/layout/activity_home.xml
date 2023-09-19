@@ -12,9 +12,11 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
+        android:src="@drawable/demo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"  />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
 
     <TextView
@@ -22,6 +24,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/aladin"
+        android:text="@string/techtalks"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/logo"
         app:layout_constraintStart_toStartOf="@id/logo"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
@@ -32,14 +40,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:hint="Enter your name..."
-        android:paddingLeft="15dp"
+        android:hint="@string/enter_your_name"
+        android:padding="15dp"
         app:circularflow_radiusInDP="3dp"
         app:layout_constraintEnd_toEndOf="@+id/title"
-        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="@id/title"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
@@ -51,12 +58,12 @@
         android:layout_marginTop="26dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:hint="Enter your email..."
+        android:hint="@string/enter_your_email"
         app:circularflow_radiusInDP="3dp"
         app:layout_constraintEnd_toEndOf="@+id/name"
         app:layout_constraintStart_toStartOf="@id/name"
         app:layout_constraintTop_toBottomOf="@+id/name"
-        android:paddingLeft="15dp"/>
+        android:padding="15dp"/>
 
     <TextView
         android:id="@+id/phone"
@@ -66,12 +73,12 @@
         android:layout_marginTop="26dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:hint="Enter your phone nember..."
+        android:hint="Enter your phone number"
         app:circularflow_radiusInDP="3dp"
         app:layout_constraintEnd_toEndOf="@+id/email"
         app:layout_constraintStart_toStartOf="@id/email"
         app:layout_constraintTop_toBottomOf="@+id/email"
-        android:paddingLeft="15dp"/>
+        android:padding="15dp"/>
 
     <TextView
         android:id="@+id/gender"
@@ -86,7 +93,7 @@
         app:layout_constraintEnd_toEndOf="@+id/phone"
         app:layout_constraintStart_toStartOf="@id/phone"
         app:layout_constraintTop_toBottomOf="@+id/phone"
-        android:paddingLeft="15dp"/>
+        android:padding="15dp"/>
 
     <TextView
         android:id="@+id/pass"
@@ -101,10 +108,10 @@
         app:layout_constraintEnd_toEndOf="@+id/gender"
         app:layout_constraintStart_toStartOf="@id/gender"
         app:layout_constraintTop_toBottomOf="@+id/gender"
-        android:paddingLeft="15dp"/>
+        android:padding="15dp"/>
 
     <TextView
-        android:id="@+id/conpass"
+        android:id="@+id/confirmpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -116,20 +123,20 @@
         app:layout_constraintEnd_toEndOf="@+id/pass"
         app:layout_constraintStart_toStartOf="@id/pass"
         app:layout_constraintTop_toBottomOf="@+id/pass"
-        android:paddingLeft="15dp"/>
+        android:padding="15dp"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
-        app:layout_constraintStart_toStartOf="@+id/conpass"
-        app:layout_constraintEnd_toEndOf="@+id/conpass"
-        app:layout_constraintTop_toBottomOf="@+id/conpass"
+        android:text="@string/register"
+        app:layout_constraintStart_toStartOf="@+id/confirmpassword"
+        app:layout_constraintEnd_toEndOf="@+id/confirmpassword"
+        app:layout_constraintTop_toBottomOf="@+id/confirmpassword"
         android:layout_marginTop="26dp" />
 
     <TextView
-        android:id="@+id/haveacc"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Have an account? Log in!"

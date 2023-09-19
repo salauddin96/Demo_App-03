@@ -1,12 +1,56 @@
 package org.demo.demo_app_03
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 
 class home : AppCompatActivity() {
+    private lateinit var name: EditText
+    private lateinit var email: EditText
+    private lateinit var phone: EditText
+    private lateinit var gender: EditText
+    private lateinit var password: EditText
+    private lateinit var conpass: EditText
+    private lateinit var button: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        var title = binding.title.text.toString
+        name = findViewById(R.id.name)
+        email = findViewById(R.id.email)
+        phone = findViewById(R.id.phone)
+        gender = findViewById(R.id.gender)
+        password = findViewById(R.id.pass)
+        conpass = findViewById(R.id.confirmpassword)
+        button = findViewById(R.id.button)
+
+        button.setOnClickListener {
+            val intent = Intent(this@home, homemain::class.java)
+            val name = name.text.toString()
+            intent.putExtra("username", name)
+
+            val email = email.text.toString()
+            intent.putExtra("email", email)
+
+            val phone = phone.text.toString()
+            intent.putExtra("phone", phone)
+
+            val gender = gender.text.toString()
+            intent.putExtra("gender", gender)
+
+            val pass = password.text.toString()
+            intent.putExtra("password", pass)
+
+            val conPass = conpass.text.toString()
+            intent.putExtra("confirm", conPass)
+
+            startActivity(intent)
+            finish()
+        }
+
+
+
     }
 }

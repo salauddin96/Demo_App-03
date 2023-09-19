@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Demo_App_03</string>
+    <string name="todo">TODO</string>
+    <string name="techtalks">TechTalks</string>
+    <string name="enter_your_name">Enter your name...</string>
+    <string name="enter_your_email">Enter your email...</string>
+    <string name="enter_your_phone_nember">Enter your phone nember...</string>
+    <string name="register">Register</string>
 </resources>
