@@ -6,4 +6,10 @@
     <string name="enter_your_email">Enter your email...</string>
     <string name="enter_your_phone_nember">Enter your phone nember...</string>
     <string name="register">Register</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="phone">phone:</string>
+    <string name="gender">gender:</string>
+    <string name="password">password:</string>
+    <string name="confimr_password">confimr password:</string>
 </resources>

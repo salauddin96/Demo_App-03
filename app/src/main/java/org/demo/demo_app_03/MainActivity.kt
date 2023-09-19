@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this@MainActivity, home::class.java))
+            startActivity(Intent(this@MainActivity, Home::class.java))
             finish()
         },3000)
 

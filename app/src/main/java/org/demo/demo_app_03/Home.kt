@@ -6,13 +6,13 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 
-class home : AppCompatActivity() {
+class Home : AppCompatActivity() {
     private lateinit var name: EditText
     private lateinit var email: EditText
     private lateinit var phone: EditText
     private lateinit var gender: EditText
     private lateinit var password: EditText
-    private lateinit var conpass: EditText
+    private lateinit var confirm: EditText
     private lateinit var button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,11 +23,11 @@ class home : AppCompatActivity() {
         phone = findViewById(R.id.phone)
         gender = findViewById(R.id.gender)
         password = findViewById(R.id.pass)
-        conpass = findViewById(R.id.confirmpassword)
+        confirm = findViewById(R.id.confirmpassword)
         button = findViewById(R.id.button)
 
         button.setOnClickListener {
-            startActivity( Intent(this@home, homemain::class.java))
+            startActivity( Intent(this@Home, Second::class.java))
             val name = name.text.toString()
             intent.putExtra("name", name)
 
@@ -43,7 +43,7 @@ class home : AppCompatActivity() {
             val pass = password.text.toString()
             intent.putExtra("password", pass)
 
-            val conPass = conpass.text.toString()
+            val conPass = confirm.text.toString()
             intent.putExtra("confirm", conPass)
 
             startActivity(intent)
