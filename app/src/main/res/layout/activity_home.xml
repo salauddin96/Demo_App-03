@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
 
-    <TextView
+    <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,12 +50,12 @@
         app:layout_constraintStart_toStartOf="@id/title"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <TextView
+    <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
         android:hint="@string/enter_your_email"
@@ -65,60 +65,60 @@
         app:layout_constraintTop_toBottomOf="@+id/name"
         android:padding="15dp"/>
 
-    <TextView
+    <EditText
         android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:hint="Enter your phone number"
+        android:hint="@string/enter_your_phone_number"
         app:circularflow_radiusInDP="3dp"
         app:layout_constraintEnd_toEndOf="@+id/email"
         app:layout_constraintStart_toStartOf="@id/email"
         app:layout_constraintTop_toBottomOf="@+id/email"
         android:padding="15dp"/>
 
-    <TextView
+    <EditText
         android:id="@+id/gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:hint="Enter your gender..."
+        android:hint="@string/enter_your_gender"
         app:circularflow_radiusInDP="3dp"
         app:layout_constraintEnd_toEndOf="@+id/phone"
         app:layout_constraintStart_toStartOf="@id/phone"
         app:layout_constraintTop_toBottomOf="@+id/phone"
         android:padding="15dp"/>
 
-    <TextView
+    <EditText
         android:id="@+id/pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:hint="Enter your password..."
+        android:hint="@string/enter_your_password"
         app:circularflow_radiusInDP="3dp"
         app:layout_constraintEnd_toEndOf="@+id/gender"
         app:layout_constraintStart_toStartOf="@id/gender"
         app:layout_constraintTop_toBottomOf="@+id/gender"
         android:padding="15dp"/>
 
-    <TextView
+    <EditText
         android:id="@+id/confirmpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
-        android:hint="Confirm your password..."
+        android:hint="@string/confirm_your_password"
         app:circularflow_radiusInDP="3dp"
         app:layout_constraintEnd_toEndOf="@+id/pass"
         app:layout_constraintStart_toStartOf="@id/pass"
@@ -139,7 +139,7 @@
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Have an account? Log in!"
+        android:text="@string/have_an_account_log_in"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@+id/button"
         app:layout_constraintEnd_toEndOf="@+id/button"

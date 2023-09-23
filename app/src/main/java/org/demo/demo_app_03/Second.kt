@@ -2,48 +2,28 @@ package org.demo.demo_app_03
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
+import org.demo.demo_app_03.databinding.ActivityHomeBinding
+import org.demo.demo_app_03.databinding.ActivityHomeMainBinding
 
 class Second : AppCompatActivity() {
-    private lateinit var nameTextView: TextView
-    private lateinit var emailTextView: TextView
-    private lateinit var phoneTextView: TextView
-    private lateinit var genderTextView: TextView
-    private lateinit var passwordTextView: TextView
-    private lateinit var conPassTextView: TextView
+    private val binding by lazy {
+        ActivityHomeMainBinding.inflate(layoutInflater)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+        fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(binding.root)
 
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home_main)
+            val displayTextButton = findViewById<Button>(R.id.button)
+            displayTextButton.setOnClickListener {
+                // Handle the button click to display the received text
+                val receivedText = binding.viewModel?.receivedText ?: "name"
+                // You can display the received text in your UI
 
-        nameTextView = findViewById(R.id.name)
-        val userName = intent.getStringExtra("name")
-        nameTextView.text = "User Name: "+userName
-
-        emailTextView = findViewById(R.id.email)
-        val userEmail = intent.getStringExtra("email")
-        nameTextView.text = "User Name: "+userEmail
-
-        phoneTextView = findViewById(R.id.phone)
-        val userPhone = intent.getStringExtra("phone")
-        phoneTextView.text = "User Name: "+userPhone
-
-        genderTextView = findViewById(R.id.gender)
-        val userGender = intent.getStringExtra("gender")
-        genderTextView.text = "User Name: "+userGender
-
-        passwordTextView = findViewById(R.id.pass)
-        val userPassword = intent.getStringExtra("password")
-        passwordTextView.text = "User Name: "+userPassword
-
-        conPassTextView = findViewById(R.id.confirmpassword)
-        val userConfirm = intent.getStringExtra("confirm")
-        conPassTextView.text = "User Name: "+userConfirm
+                val userName = intent.getStringExtra("name")
 
 
-
-
-
-    }
+            }
+        }
     }

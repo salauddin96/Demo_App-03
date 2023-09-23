@@ -12,4 +12,9 @@
     <string name="gender">gender:</string>
     <string name="password">password:</string>
     <string name="confimr_password">confimr password:</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="enter_your_gender">Enter your gender...</string>
+    <string name="enter_your_password">Enter your password...</string>
+    <string name="confirm_your_password">Confirm your password...</string>
+    <string name="have_an_account_log_in">Have an account? Log in!</string>
 </resources>
